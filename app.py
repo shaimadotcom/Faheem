@@ -263,10 +263,11 @@ class ContextAnalyzer:
        API_KEY = os.environ.get("WEATHER_API_KEY")
        CITY="Jeddah"
        url=f"http://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
-        try:
+       try:
             response=requests.get(url,timeout=3);data=response.json()
             if response.status_code==200 and"main"in data:return data["main"]["temp"]
-        except:return 28
+       except:
+            return 28
 
 class RecommendationEngine:
     def __init__(self,df_drinks,df_pastries,df_mood_prefs):
