@@ -1,0 +1,14 @@
+mood,acidity_preference,aroma_preference,bitterness_preference,sweetness_preference,body_preference
+happy,balanced,strong,light,strong,medium
+stressed,balanced,strong,strong,mild,full
+tired,lively,strong,strong,faint,full
+sad,balanced,strong,light,strong,full
+calm,mild,balanced,light,balanced,light
+neutral,balanced,balanced,balanced,balanced,medium
+angry,lively,strong,strong,faint,medium
+excited,balanced,strong,light,strong,full
+surprise,high,strong,low,high,light
+bored,high,strong,medium,high,medium
+anxious,mild,faint,light,mild,light
+relaxed,low,balanced,low,mild,medium
+confused,medium,strong,medium,medium,medium
