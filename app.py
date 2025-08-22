@@ -260,8 +260,9 @@ class ContextAnalyzer:
         return{'time_category':time_category,'season':season,'temperature':current_temp,'weather_condition':weather_condition,'weekend':now.weekday()>=5}
     @staticmethod
     def get_weather():
-        API_KEY="25f3e394030d70a368078f14d89ecee2";CITY="Jeddah"
-        url=f"http://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
+       API_KEY = os.environ.get("WEATHER_API_KEY")
+       CITY="Jeddah"
+       url=f"http://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
         try:
             response=requests.get(url,timeout=3);data=response.json()
             if response.status_code==200 and"main"in data:return data["main"]["temp"]
